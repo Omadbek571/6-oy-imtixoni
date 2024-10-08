@@ -78,7 +78,7 @@ function Login() {
           <form className="p-6 bg-slate-500 flex-col flex gap-6 rounded-xl mx-auto w-full border border-slate-600 shadow-md">
             <h3 className="block text-sm font-medium text-gray-300">Электронная почта</h3>
             <input
-              defaultValue={"holtaaka@gmai.com"}
+              defaultValue={"zorbek@gmai.com"}
               ref={emailRef}
               type="email"
               placeholder="Введите электронную почту..."
@@ -87,7 +87,7 @@ function Login() {
       
             <h3 className="block text-sm font-medium text-gray-300">Пароль</h3>
             <input
-              defaultValue={"1234holtaaka"}
+              defaultValue={"1234zorbek"}
               ref={passwordRef}
               type="password"
               placeholder="Введите пароль..."

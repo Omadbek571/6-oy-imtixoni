@@ -5,7 +5,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import ErrorPages from './pages/ErrorPages'
 import Detailes from './pages/Detailes'
-import fonImg from "./imges/register-fon.jpg"
+import fonImg from "./imges/img1.jpg"
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"))
@@ -32,9 +32,14 @@ function App() {
   }
 
   return (
-    <div 
-      className='border-slate-300 rounded-xl min-h-screen ' 
-    >
+    <div
+      className='border-slate-300 rounded-xl min-h-screen '
+      style={{
+        backgroundImage: `url(${fonImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}>
       <Routes>
         <Route path='/' element={<PrivateRoute isAuth={token}><Home /></PrivateRoute>}></Route>
         <Route path='/register' element={<Register />}></Route>

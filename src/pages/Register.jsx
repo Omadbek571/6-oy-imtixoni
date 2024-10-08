@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import loginImg from "../imges/login-icon.png"
+import fongaImg from "../imges/img1.jpg"
 
 function Register() {
     const firstnameRef = useRef()
@@ -103,7 +104,7 @@ function Register() {
     }
 
     return (
-      <div className="flex flex-col w-full bg-slate-800 p-8 rounded-3xl max-w-2xl mx-auto border-4 border-slate-700 shadow-lg">
+      <div className="flex flex-col w-full bg-slate-800 p-8 rounded-3xl max-w-2xl mx-auto border-4 border-slate-700 shadow-lg" >
           <Link className="w-14 mb-5" to="/login">
               <img src={loginImg} alt="img" className="hover:opacity-80 transition duration-300" />
           </Link>
@@ -144,7 +145,7 @@ function Register() {
   
               <h3 className="block text-sm font-medium text-gray-300">EMAIL</h3>
               <input
-                  defaultValue={"holtaaka@gmai.com"}
+                  defaultValue={"zorbek@gmai.com"}
                   ref={emailRef}
                   type="email"
                   placeholder="Введите электронную почту..."
@@ -153,7 +154,7 @@ function Register() {
   
               <h3 className="block text-sm font-medium text-gray-300">PASSWORD</h3>
               <input
-                  defaultValue={"1234holtaaka"}
+                  defaultValue={"1234zorbek"}
                   ref={passwordRef}
                   type="password"
                   placeholder="Введите пароль..."
@@ -162,7 +163,7 @@ function Register() {
   
               <h3 className="block text-sm font-medium text-gray-300">RE PASSWORD</h3>
               <input
-                  defaultValue={"1234holtaaka"}
+                  defaultValue={"1234zorbek"}
                   ref={rePassworRef}
                   type="password"
                   placeholder="Повторите пароль..."
