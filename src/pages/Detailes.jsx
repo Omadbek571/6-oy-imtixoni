@@ -19,7 +19,7 @@ function Details() {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Детали продукта</h1>
+      <h1 className="text-4xl font-bold text-center mb-8 text-white ">Детали продукта</h1>
       <Link to="/" className='w-full py-3 px-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold text-lg rounded-lg shadow-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300'>Главная страница</Link>
       {product ? (
         <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-xl shadow-2xl p-6 md:p-10 ">
