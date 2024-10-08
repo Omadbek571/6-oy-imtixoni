@@ -103,88 +103,87 @@ function Register() {
     }
 
     return (
-        <div className="flex flex-col w-full bg-slate-800 p-8 rounded-3xl max-w-2xl mx-auto border-4 border-slate-700 shadow-lg">
+      <div className="flex flex-col w-full bg-slate-800 p-8 rounded-3xl max-w-2xl mx-auto border-4 border-slate-700 shadow-lg">
           <Link className="w-14 mb-5" to="/login">
-            <img src={loginImg} alt="img" className="hover:opacity-80 transition duration-300" />
+              <img src={loginImg} alt="img" className="hover:opacity-80 transition duration-300" />
           </Link>
-      
+  
           <div className="flex items-center p-1">
-            <h1 className="text-white font-bold text-2xl mx-auto text-center leading-tight">
-              NEW <br />
-              ACCOUNT
-            </h1>
-          
+              <h1 className="text-white font-bold text-2xl mx-auto text-center leading-tight">
+                  НОВЫЙ АККАУНТ
+              </h1>
           </div>
-      
+  
           <form className="p-6 bg-slate-500 flex-col flex gap-6 rounded-xl mx-auto w-96 border border-slate-600 shadow-md">
-            <h3 className="block text-sm font-medium text-gray-300">NAME</h3>
-            <input
-              defaultValue={"Olimjonov"}
-              ref={firstnameRef}
-              type="text"
-              placeholder="Enter FirstName..."
-              className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
-            />
-      
-            <h3 className="block text-sm font-medium text-gray-300">LASTNAME</h3>
-            <input
-              defaultValue={"Omadbek"}
-              ref={lastnameRef}
-              type="text"
-              placeholder="Enter LastName..."
-              className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
-            />
-      
-            <h3 className="block text-sm font-medium text-gray-300">AGE</h3>
-            <input
-              defaultValue={"16"}
-              ref={ageRef}
-              type="text"
-              placeholder="Enter Age..."
-              className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
-            />
-      
-            <h3 className="block text-sm font-medium text-gray-300">EMAIL</h3>
-            <input
-              defaultValue={"omadbekjonn@gmai.com"}
-              ref={emailRef}
-              type="email"
-              placeholder="Enter Email..."
-              className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
-            />
-      
-            <h3 className="block text-sm font-medium text-gray-300">PASSWORD</h3>
-            <input
-              defaultValue={"1234Omadbekk"}
-              ref={passwordRef}
-              type="password"
-              placeholder="Enter password..."
-              className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
-            />
-      
-            <h3 className="block text-sm font-medium text-gray-300">RE PASSWORD</h3>
-            <input
-              defaultValue={"1234Omadbekk"}
-              ref={rePassworRef}
-              type="password"
-              placeholder="Enter re password..."
-              className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
-            />
-      
-            <button
-              disabled={loading}
-              onClick={handlRegister}
-              className="w-full py-3 px-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold text-lg rounded-lg shadow-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300"
-            >
-              {loading ? "LOADING..." : "REGISTER"}
-            </button>
-      
-            <Link className="mx-auto mt-2 text-gray-300 hover:text-green-400 transition duration-300" to="/login">
-              Log in
-            </Link>
+              <h3 className="block text-sm font-medium text-gray-300">ИМЯ</h3>
+              <input
+                  defaultValue={"Olimjonov"}
+                  ref={firstnameRef}
+                  type="text"
+                  placeholder="Введите имя..."
+                  className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
+              />
+  
+              <h3 className="block text-sm font-medium text-gray-300">ФАМИЛИЯ</h3>
+              <input
+                  defaultValue={"Omadbek"}
+                  ref={lastnameRef}
+                  type="text"
+                  placeholder="Введите фамилию..."
+                  className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
+              />
+  
+              <h3 className="block text-sm font-medium text-gray-300">ВОЗРАСТ</h3>
+              <input
+                  defaultValue={"16"}
+                  ref={ageRef}
+                  type="text"
+                  placeholder="Введите возраст..."
+                  className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
+              />
+  
+              <h3 className="block text-sm font-medium text-gray-300">EMAIL</h3>
+              <input
+                  defaultValue={"holtaaka@gmai.com"}
+                  ref={emailRef}
+                  type="email"
+                  placeholder="Введите электронную почту..."
+                  className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
+              />
+  
+              <h3 className="block text-sm font-medium text-gray-300">PASSWORD</h3>
+              <input
+                  defaultValue={"1234holtaaka"}
+                  ref={passwordRef}
+                  type="password"
+                  placeholder="Введите пароль..."
+                  className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
+              />
+  
+              <h3 className="block text-sm font-medium text-gray-300">RE PASSWORD</h3>
+              <input
+                  defaultValue={"1234holtaaka"}
+                  ref={rePassworRef}
+                  type="password"
+                  placeholder="Повторите пароль..."
+                  className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
+              />
+  
+              <button
+                  disabled={loading}
+                  onClick={handlRegister}
+                  className="w-full py-3 px-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold text-lg rounded-lg shadow-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300"
+              >
+                  {loading ? "ЗАГРУЗКА..." : "РЕГИСТРАЦИЯ"}
+              </button>
+  
+              <Link className="mx-auto mt-2 text-gray-300 hover:text-green-400 transition duration-300" to="/login">
+                  Вход
+              </Link>
           </form>
-        </div>
-      )
+      </div>
+  );
+  
       
 }
 

@@ -53,10 +53,9 @@ function Login() {
         })
         
         .then((response) => {
-            console.log(response.data);
-            if (response.data) {
+            if (response.data.user.id) {
                 localStorage.setItem("token", response.data.accessToken)
-                localStorage.setItem("user", JSON.stringify(response.data))
+                localStorage.setItem("user", JSON.stringify(response.data.user))
                 navigator("/")
             }
             
@@ -74,24 +73,24 @@ function Login() {
     }
     return (
         <div className="flex flex-col w-full bg-slate-800 p-8 rounded-3xl max-w-md mx-auto border-4 border-slate-700 shadow-lg">
-          <h1 className="text-white font-bold text-3xl text-center mb-5">LOGIN</h1>
+          <h1 className="text-white font-bold text-3xl text-center mb-5">Вход</h1>
       
           <form className="p-6 bg-slate-500 flex-col flex gap-6 rounded-xl mx-auto w-full border border-slate-600 shadow-md">
-            <h3 className="block text-sm font-medium text-gray-300">EMAIL</h3>
+            <h3 className="block text-sm font-medium text-gray-300">Электронная почта</h3>
             <input
-              defaultValue={"omadbkmeksnfkk@gmai.com"}
+              defaultValue={"holtaaka@gmai.com"}
               ref={emailRef}
               type="email"
-              placeholder="Enter email..."
+              placeholder="Введите электронную почту..."
               className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
             />
       
-            <h3 className="block text-sm font-medium text-gray-300">PASSWORD</h3>
+            <h3 className="block text-sm font-medium text-gray-300">Пароль</h3>
             <input
-              defaultValue={"1234hksglsdyh"}
+              defaultValue={"1234holtaaka"}
               ref={passwordRef}
               type="password"
-              placeholder="Enter password..."
+              placeholder="Введите пароль..."
               className="mt-1 block w-full p-2 bg-transparent border-b-2 border-yellow-500 focus:outline-none focus:border-yellow-600 text-white"
             />
       
@@ -100,11 +99,11 @@ function Login() {
               onClick={handleLogin}
               className="w-full py-3 px-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold text-lg rounded-lg shadow-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300"
             >
-              {loading ? "LOADING..." : "LOGIN"}
+              {loading ? "ЗАГРУЗКА..." : "Вход"}
             </button>
       
             <Link className="mx-auto mt-4 text-gray-300 hover:text-green-400 transition duration-300" to="/register">
-              Register
+            Регистрация
             </Link>
           </form>
         </div>

@@ -18,7 +18,7 @@ function App() {
         setToken(localStorage.getItem("token"))
       } else {
         if (!location.pathname.includes("/register")) {
-          navigate("/login")
+          navigate("/")
         }
       }
     }
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div 
-      className=' p-5 border-4 border-slate-300 rounded-xl min-h-screen ' 
+      className='border-slate-300 rounded-xl min-h-screen ' 
     >
       <Routes>
         <Route path='/' element={<PrivateRoute isAuth={token}><Home /></PrivateRoute>}></Route>
